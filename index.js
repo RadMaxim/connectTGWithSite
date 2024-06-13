@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 8080;
 app.use(exp.json());
 
 app.get('/', (req, res) => {
-    res.send('products api running new deploy');
+    res.send('Hello my first app');
 });
 
 app.get('/ping', (req, res) => {
