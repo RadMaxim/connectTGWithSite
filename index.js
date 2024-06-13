@@ -1,12 +1,7 @@
 const exp = require('express');
-// const Telebot = require('telebot')
-// const bot = new Telebot('6567440090:AAGC0oKTz-R9jKOxQUDmevEmvKc7r_RT8m0')
+const bot = require("./myTelebot.js")
 const app = exp();
-// bot.on('text',(msg)=>{
-//     let id = msg.chat.id
-//     bot.sendMessage(id, "hello")
-// })
-// bot.start();
+
 const PORT = process.env.PORT || 8080;
 
 app.use(exp.json());
