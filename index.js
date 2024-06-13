@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/ping', (req, res) => {
-    res.send('PONG')
+    res.send("<h1>hello</h1>")
 });
 // /products
 
