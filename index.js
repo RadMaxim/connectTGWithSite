@@ -1,5 +1,6 @@
 const exp = require('express');
-const bot = require("./myTelebot.js")
+
+require("./myTelebot.js")
 const app = exp();
 
 const PORT = process.env.PORT || 8080;
@@ -18,6 +19,6 @@ app.get('/ping', (req, res) => {
 // /users
 
 
-app.listen(8080, () => {
+app.listen(PORT, () => {
     console.log('Server is listenin on PORT :' + PORT);
 })

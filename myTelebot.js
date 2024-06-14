@@ -1,7 +1,18 @@
+require('dotenv').config();
+const validator = require('validator')
+const token = process.env.BOT_TOKEN;
+
 const Telebot = require('telebot')
-const bot = new Telebot('6567440090:AAGC0oKTz-R9jKOxQUDmevEmvKc7r_RT8m0')
+const bot = new Telebot(token)
 bot.on('text',(msg)=>{
     let id = msg.chat.id
-    bot.sendMessage(id, "hello")
+    if (validator.isEmail(msg.text)) {
+
+        bot.sendMessage(id, "It is a correct email")  
+    }
+    else {
+        bot.sendMessage(id, "It is not a correct email")  
+    }
+   
 })
 bot.start();

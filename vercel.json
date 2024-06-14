@@ -11,5 +11,10 @@
             "src": "/(.*)",
             "dest": "index.js"
         }
-    ]
+    ],
+
+    "env":{
+        "BOT_TOKEN":"6567440090:AAGC0oKTz-R9jKOxQUDmevEmvKc7r_RT8m0",
+        "PORT":"8080"
+    }
 }
