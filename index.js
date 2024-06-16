@@ -1,9 +1,11 @@
-const exp = require('express');
+import exp from 'express'
+import config from 'config'
+import './myTelebot.js'
 
-require("./myTelebot.js")
+
 const app = exp();
 
-const PORT = process.env.PORT || 8080;
+const PORT = config.get('PORT') || 8080;
 
 app.use(exp.json());
 
