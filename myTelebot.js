@@ -43,4 +43,5 @@ bot.on('text',async (msg)=>{
     // }
    
 })
-bot.start();
+// bot.start();
+export  {bot}
