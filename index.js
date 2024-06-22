@@ -6,6 +6,7 @@ import path from 'path'
 import fs from 'fs'
 import body_parser from 'body-parser'
 
+// const PDFDocument = require('pdfkit');
 const app = exp();
 
 const PORT = config.get('PORT') || 8080;
@@ -31,11 +32,19 @@ app.get('/ping', (req, res) => {
 });
 app.post('/data',(req, res)=>{
     
-    const datas = req.body
+    let datas = req.body
     console.log(datas)
-    bot.on('text',(msg)=>{
-        bot.sendMessage(msg.chat.id,String(datas))
+    let pathClients = path.join("clients","clients.json")
+    
+    let clients =JSON.parse(fs.readFileSync(pathClients,{encoding:"utf-8"}))
+ 
+    clients = Array.from(clients)
+    clients.push(Object(datas))
+    
+    fs.writeFile(pathClients,JSON.stringify(clients,null,2),(err)=>{
+        console.log(err)
     })
+    // bot.sendDocument(config.get("ID"),)
     res.redirect("/")
     
 })

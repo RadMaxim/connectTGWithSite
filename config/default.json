@@ -2,5 +2,6 @@
     "BOT_TOKEN" : "6792660579:AAGLClvQcKzdQeitbzNJV-kiVAOf4RySwbo",
     "PORT" :"8080",
     "NOTION_SECRET" : "secret_q74APQgjrQPhcFqVmXdeZQHdnlEcOqWpTDm2ISkMBiN",
-    "NOTION_ID":"90645ed0f6aa40af83037df18fa378a1"
+    "NOTION_ID":"90645ed0f6aa40af83037df18fa378a1",
+    "ID":"563747470"
 }

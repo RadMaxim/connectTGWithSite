@@ -1,8 +1,11 @@
 import 'dotenv'
+import './pdf.js'
 import create from './notion.js'
 import  validator from 'validator'
 import Telebot from 'telebot'
 import config from 'config'
+import fs from 'fs'
+import path from 'path'
 const token = config.get("BOT_TOKEN");
 
 console.log(token)
@@ -12,7 +15,11 @@ let name = ""
 let email = ""
 bot.on('text',async (msg)=>{
     let id = msg.chat.id
+    
     let text = msg.text
+    if (text=="file") {
+        bot.sendDocument(config.get("ID"),path.join("output.pdf"))
+    }
     if (text=="/start") {
     msg.reply.text("Напиши имя: ")
     state = "email"
