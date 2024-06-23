@@ -53,7 +53,7 @@ app.post('/data',(req, res)=>{
 // /users
 
 
-app.listen(PORT, () => {
+app.listen(PORT,'0.0.0.0', () => {
     console.log('Server is listenin on PORT :' + PORT);
 })
 bot.connect()
